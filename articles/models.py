@@ -27,12 +27,16 @@ class Article(models.Model):
         verbose_name = "دسته‌بندی" , 
     )
 
-    content = models.TextField("متن مقاله (HTML)")
-    read_time = models.PositiveSmallIntegerField("زمان مطالعه (دقیقه)" , default = 3)
+
+    read_time = models.CharField("زمان مطالعه" ,
+        max_length=30 , 
+        default="۳ دقیقه" ,
+        help_text="مثلاً ۴ دقیقه یا ۷–۹ دقیقه" ,
+    )
     published_at = models.DateField("تاریخ انتشار"  , default = timezone.localdate)
 
     is_featured = models.BooleanField("مقاله ویژه" , default = False)
-    is_published_at = models.BooleanField("منتشر شده" , default = True)
+    is_published = models.BooleanField("منتشر شده" , default = True)
 
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
@@ -68,6 +72,41 @@ class ArticlesPageSettings(models.Model):
 
     def delete(self , *args , **kwargs):
         pass 
+
+    def __str__(self):
+        return self.title
+
+class ArticleBlock(models.Model):
+    class BlockType(models.TextChoices):
+        PARAGRAPH = "paragraph" , "پاراگراف"
+        HEADING = "heading" , "عنوان فرعی"
+        LIST = "list" , "لیست"
+
+    article = models.ForeignKey(Article , on_delete = models.CASCADE , related_name = "blocks")
+    type = models.CharField("نوع" , max_length = 20 , choices=BlockType.choices , default = BlockType.PARAGRAPH)
+    text = models.TextField("متن" , blank = True, help_text = "برای پاراگراف و عنوان فرعی")
+    items = models.TextField("آیتم‌های لیست" , blank = True, help_text = "هر آیتم در یک خط جداگانه")
+    order = models.PositiveSmallIntegerField("ترتیب" , default = 0)
+
+    class Meta:
+        ordering = ["order" , "id"]
+        verbose_name = "بلوک متن"
+        verbose_name_plural = "بلوک‌های متن"
+
+    def __str__(self):
+        return f"{self.get_type_display()} - {self.order}"
+
+
+class ArticleSource(models.Model):
+    article = models.ForeignKey(Article , on_delete = models.CASCADE , related_name = "sources")
+    title = models.CharField("عنوان منبع" , max_length = 200)
+    url = models.URLField("لینک")
+    order = models.PositiveSmallIntegerField("ترتیب" , default = 0)
+
+    class Meta:
+        ordering = ["order" , "id"]
+        verbose_name = "منبع"
+        verbose_name_plural = "منابع"
 
     def __str__(self):
         return self.title
