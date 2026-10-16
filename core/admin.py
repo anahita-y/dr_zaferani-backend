@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+class SingletonAdmin(admin.ModelAdmin):
+    def has_add_permission(self , request):
+        return not self.model.objects.exists()
+
+    def has_delete_permission(self , request , obj = None):
+        return False

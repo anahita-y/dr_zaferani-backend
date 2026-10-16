@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from rest_framework.response import Response
+from rest_framework.views import APIView
+from .serializers import gallery_payload
 
-# Create your views here.
+
+class GalleryView(APIView):
+    def get(self , request):
+        return Response(gallery_payload({"request": request}))

@@ -25,7 +25,16 @@ urlpatterns = [
     path("api/services/" , include("services.urls")) ,
     path("api/about/" , include("about.urls")) ,
     path("api/articles/" , include("articles.urls")) ,
+    path("api/gallery/" , include("gallery.urls")) ,
+    path("api/contact/" , include("contact.urls")) ,
+    path("api/faq/" , include("faq.urls")) ,
+    path("api/testimonials/" , include("testimonials.urls")) ,
 ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL , document_root = settings.MEDIA_ROOT)
+
+
+admin.site.site_header = "پنل مدیریت سایت دکتر زعفرانی"
+admin.site.site_title = "مدیریت سایت"
+admin.site.index_title = "مدیریت محتوا"
