@@ -13,7 +13,7 @@ class AboutPage(models.Model):
     experience_badge_icon = models.CharField("نام ایکون کارت تجربه" , max_length = 50 , default = "graduation-cap")
 
     award_title = models.CharField("عنوان کارت افتخار" , max_length = 100 , default = "پزشک برگزیده")
-    award_subtile = models.CharField("زیرعنوان کارت افتخار" , max_length = 100 , blank = True)
+    award_subtitle = models.CharField("زیرعنوان کارت افتخار", max_length=100, blank=True)
     award_icon = models.CharField("نام ایکون کارت افتخار" , max_length = 50 , default = "trophy")
 
     booking_button_text = models.CharField("متن دکمه رزرو" , max_length = 50 , default = "رزرو نوبت مشاوره")
