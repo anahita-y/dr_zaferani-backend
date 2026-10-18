@@ -35,7 +35,7 @@ class TestimonialView(APIView):
             "settings": TestimonialsSettingsSerializer(cfg).data if cfg else None ,
             "total": total ,
             "testimonials": TestimonialSerializer(testimonials , many = True).data ,
-            "subjects": ReviewSubjectSerializer(ReviewSubject.objects.filter(is_activ = True) , many = True).data ,
+            "subjects": ReviewSubjectSerializer(ReviewSubject.objects.filter(is_active = True) , many = True).data ,
         })
 
     def post(self, request):
