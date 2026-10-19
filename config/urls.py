@@ -29,6 +29,7 @@ urlpatterns = [
     path("api/contact/" , include("contact.urls")) ,
     path("api/faq/" , include("faq.urls")) ,
     path("api/testimonials/" , include("testimonials.urls")) ,
+        path("api/appointment/", include("appointment.urls")) ,
 ]
 
 if settings.DEBUG:
