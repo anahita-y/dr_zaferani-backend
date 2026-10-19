@@ -14,7 +14,7 @@ class HomePage(models.Model):
     booking_button_icon = models.CharField("نام ایکون رزرو نوبت" , max_length = 50 , default = "calendar")
     booking_button_link = models.CharField("لینک رزرو نوبت" , max_length = 50 , default = "/booking")
 
-    consult_button_tex = models.CharField("متن دکمه مشاوره" , max_length = 50 , default = "دریافت مشاوره")
+    consult_button_text = models.CharField("متن دکمه مشاوره", max_length=50, default="دریافت مشاوره")
     consult_button_icon = models.CharField("نام ایکون مشاوره" , max_length = 50 , default = "phone")
     consult_button_link = models.CharField("لینک مشاوره" , max_length = 200 , default = "/contact")
 
@@ -31,9 +31,8 @@ class HomePage(models.Model):
     articles_description = models.TextField("متن زیر تایتل مقالات" , blank = True)
 
     articles_button_text = models.CharField("متن دکمه مشاهده مقالات" , max_length = 50 , default = "مشاهده همه مقالات")
-    articles_button_text = models.CharField("نام ایکون مشاهده مقالات" , max_length = 50 , default = "arrow-left")
-    articles_button_text = models.CharField("لینک مشاهده مقالات" , max_length = 200 , default = "/articles")
-
+    articles_button_icon = models.CharField("نام ایکون مشاهده مقالات", max_length=50, default="arrow-left")
+    articles_button_link = models.CharField("لینک مشاهده مقالات", max_length=200, default="/articles")
     class Meta:
         verbose_name = "صفحه اصلی"
         verbose_name_plural = "صفحه اصلی"
