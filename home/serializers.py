@@ -19,7 +19,7 @@ class HomePageSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
     def get_services(self , obj):
-        qs = Service.objects.filter(is_activ = True , show_on_home = True)
+        qs = Service.objects.filter(is_active = True , show_on_home = True)
         return ServiceSerializer(qs , many = True).data
 
     def get_articles(self , obj):
