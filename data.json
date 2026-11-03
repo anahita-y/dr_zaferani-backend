@@ -1,0 +1,378 @@
+[
+{
+  "model": "home.homepage",
+  "pk": 1,
+  "fields": {
+    "doctor_name": "test",
+    "subtitle": "f",
+    "biography": "bio",
+    "doctor_image": "home/logo.png",
+    "experience_years": 20,
+    "experience_label": "سال تجربه",
+    "badge_text": "بیش از ۲۰ سال تجربه",
+    "booking_button_text": "رزرو نوبت مشاوره",
+    "booking_button_icon": "calendar",
+    "booking_button_link": "/booking",
+    "consult_button_text": "دریافت مشاوره",
+    "consult_button_icon": "phone",
+    "consult_button_link": "/contact",
+    "services_badge_text": "خدمات تخصصی",
+    "services_title": "خدمات چشم پزشکی",
+    "services_description": "",
+    "services_button_text": "مشاهده همه خدمات",
+    "services_button_icon": "arrow-left",
+    "services_button_link": "/services",
+    "articles_badge_text": "مقالات",
+    "articles_title": "آخرین مطالب آموزشی",
+    "articles_description": "",
+    "articles_button_text": "مشاهده همه مقالات",
+    "articles_button_icon": "arrow-left",
+    "articles_button_link": "/articles"
+  }
+},
+{
+  "model": "services.service",
+  "pk": 2,
+  "fields": {
+    "title": "1",
+    "description": "خدمت",
+    "icon": "star",
+    "more_info": "salam",
+    "order": 0,
+    "show_on_home": true,
+    "is_active": true
+  }
+},
+{
+  "model": "services.service",
+  "pk": 3,
+  "fields": {
+    "title": "tesr",
+    "description": "testttttttt",
+    "icon": "heart",
+    "more_info": "testttttttttttttttttttttttttttttttttttttttttt",
+    "order": 0,
+    "show_on_home": true,
+    "is_active": true
+  }
+},
+{
+  "model": "about.aboutpage",
+  "pk": 1,
+  "fields": {
+    "badge_text": "درباره پزشک",
+    "doctor_name": "test",
+    "doctor_name_en": "t",
+    "short_bio": "bio",
+    "long_bio": "biooooo",
+    "doctor_image": "about/logo.png",
+    "experience_badge_value": "+22",
+    "experience_badge_label": "سال تجربه",
+    "experience_badge_icon": "graduation-cap",
+    "award_title": "پزشک برگزیده",
+    "award_subtitle": "20",
+    "award_icon": "trophy",
+    "booking_button_text": "رزرو نوبت مشاوره",
+    "booking_button_icon": "calendar",
+    "booking_button_link": "/booking"
+  }
+},
+{
+  "model": "articles.category",
+  "pk": 1,
+  "fields": {
+    "name": "a",
+    "slug": "a"
+  }
+},
+{
+  "model": "articles.category",
+  "pk": 2,
+  "fields": {
+    "name": "b",
+    "slug": "b"
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 1,
+  "fields": {
+    "title": "test",
+    "slug": "2",
+    "excerpt": "test 1",
+    "cover_image": "articles/logo.png",
+    "category": 1,
+    "read_time": "۳ دقیقه",
+    "published_at": "2026-10-19",
+    "is_featured": true,
+    "is_published": true,
+    "created_at": "2026-10-19T07:51:33.636Z",
+    "updated_at": "2026-10-20T02:47:27.167Z"
+  }
+},
+{
+  "model": "articles.article",
+  "pk": 2,
+  "fields": {
+    "title": "test 2",
+    "slug": "test-2",
+    "excerpt": "testtttt",
+    "cover_image": "articles/photo_2026-10-13_19-17-36.jpg",
+    "category": 2,
+    "read_time": "۳ دقیقه",
+    "published_at": "2026-10-19",
+    "is_featured": false,
+    "is_published": true,
+    "created_at": "2026-10-19T07:53:24.968Z",
+    "updated_at": "2026-10-19T07:53:24.968Z"
+  }
+},
+{
+  "model": "articles.articleblock",
+  "pk": 1,
+  "fields": {
+    "article": 1,
+    "type": "paragraph",
+    "text": "test .test",
+    "items": "a \r\nb\r\nc",
+    "order": 1
+  }
+},
+{
+  "model": "articles.articleblock",
+  "pk": 2,
+  "fields": {
+    "article": 2,
+    "type": "heading",
+    "text": "d",
+    "items": "eeeeeeee",
+    "order": 2
+  }
+},
+{
+  "model": "articles.articleblock",
+  "pk": 3,
+  "fields": {
+    "article": 1,
+    "type": "paragraph",
+    "text": "سلام و وقت بخیر",
+    "items": "شروع",
+    "order": 0
+  }
+},
+{
+  "model": "gallery.galleryimage",
+  "pk": 1,
+  "fields": {
+    "image": "gallery/logo.png",
+    "alt_text": "t",
+    "show_on_home": true,
+    "order": 1,
+    "is_active": true,
+    "created_at": "2026-10-19T07:56:18.545Z"
+  }
+},
+{
+  "model": "contact.contactinfo",
+  "pk": 1,
+  "fields": {
+    "logo": "contact/logo.png",
+    "title": "دکتر",
+    "subtitle": "f",
+    "description": "تست",
+    "quick_links_title": "دسترسی سریع",
+    "services_links_title": "خدمات",
+    "contact_title": "اطلاعات تماس",
+    "clinic_phone": "09",
+    "mobile_phone": "09934461303",
+    "email": "anahita.yazdani084@gmail.com",
+    "address": "Chaharmahal and BakhtiariSamanTax Street,Alley29",
+    "latitude": "0.000001",
+    "longitude": "-0.000001",
+    "copyright_text": ""
+  }
+},
+{
+  "model": "contact.sociallink",
+  "pk": 1,
+  "fields": {
+    "title": ".اینستا",
+    "icon": "github",
+    "url": "https://anahita@gmail.com",
+    "order": 0,
+    "is_active": true
+  }
+},
+{
+  "model": "contact.footerlink",
+  "pk": 1,
+  "fields": {
+    "group": "quick",
+    "title": "ایمیل",
+    "link": "ana@gmail.com",
+    "order": 0,
+    "is_active": true
+  }
+},
+{
+  "model": "contact.footerlink",
+  "pk": 2,
+  "fields": {
+    "group": "services",
+    "title": "جراحی",
+    "link": "/services",
+    "order": 0,
+    "is_active": true
+  }
+},
+{
+  "model": "testimonials.testimonialssettings",
+  "pk": 1,
+  "fields": {
+    "badge_text": "نظرات بیماران",
+    "badge_icon": "message-square",
+    "title": "تجربه بیماران از همراهی با ما",
+    "description": "",
+    "button_text": "مشاهده همه نظرات",
+    "button_icon": "chevron-down",
+    "form_badge_text": "نظر شما",
+    "form_icon": "user",
+    "form_title": "تجربه خود را با ما در میان بگذارید",
+    "form_description": "",
+    "form_note": "",
+    "notify_email": "zaferani1400@gmail.com",
+    "auto_publish": false
+  }
+},
+{
+  "model": "testimonials.reviewsubject",
+  "pk": 1,
+  "fields": {
+    "title": "کیفیت خدمات",
+    "order": 2,
+    "is_active": true
+  }
+},
+{
+  "model": "testimonials.reviewsubject",
+  "pk": 2,
+  "fields": {
+    "title": "زمان انتظار",
+    "order": 1,
+    "is_active": true
+  }
+},
+{
+  "model": "testimonials.reviewsubject",
+  "pk": 3,
+  "fields": {
+    "title": "نتیجه‌ی درمان",
+    "order": 0,
+    "is_active": true
+  }
+},
+{
+  "model": "testimonials.testimonial",
+  "pk": 1,
+  "fields": {
+    "name": "anahita",
+    "subject": null,
+    "rating": 1,
+    "text": "test",
+    "is_verified": true,
+    "is_published": true,
+    "date": "2026-10-22",
+    "created_at": "2026-10-22T18:18:58.903Z"
+  }
+},
+{
+  "model": "testimonials.testimonial",
+  "pk": 2,
+  "fields": {
+    "name": "Anahita Yazdani",
+    "subject": 2,
+    "rating": 4,
+    "text": "test email",
+    "is_verified": false,
+    "is_published": false,
+    "date": "2026-10-22",
+    "created_at": "2026-10-22T18:54:44.730Z"
+  }
+},
+{
+  "model": "testimonials.testimonial",
+  "pk": 3,
+  "fields": {
+    "name": "Anahita Yazdani",
+    "subject": 3,
+    "rating": 5,
+    "text": "testtttttttt email",
+    "is_verified": false,
+    "is_published": false,
+    "date": "2026-10-22",
+    "created_at": "2026-10-22T19:08:48.470Z"
+  }
+},
+{
+  "model": "testimonials.testimonial",
+  "pk": 4,
+  "fields": {
+    "name": "Anahita Yazdani",
+    "subject": 2,
+    "rating": 5,
+    "text": "تست 2",
+    "is_verified": false,
+    "is_published": false,
+    "date": "2026-10-22",
+    "created_at": "2026-10-22T20:02:25.913Z"
+  }
+},
+{
+  "model": "testimonials.testimonial",
+  "pk": 5,
+  "fields": {
+    "name": "Anahita Yazdani",
+    "subject": 1,
+    "rating": 5,
+    "text": "test1",
+    "is_verified": false,
+    "is_published": false,
+    "date": "2026-10-30",
+    "created_at": "2026-10-29T22:03:01.455Z"
+  }
+},
+{
+  "model": "testimonials.testimonial",
+  "pk": 6,
+  "fields": {
+    "name": "Anahita Yazdani",
+    "subject": 2,
+    "rating": 5,
+    "text": "test2",
+    "is_verified": false,
+    "is_published": false,
+    "date": "2026-10-30",
+    "created_at": "2026-10-29T22:24:38.052Z"
+  }
+},
+{
+  "model": "appointment.appointmentpagesettings",
+  "pk": 1,
+  "fields": {
+    "title": "رزرو نوبت",
+    "description": "برای دریافت نوبت، از یکی از راه‌های ارتباطی زیر استفاده کنید."
+  }
+},
+{
+  "model": "appointment.appointmentmethod",
+  "pk": 1,
+  "fields": {
+    "icon": "github",
+    "title": "g",
+    "value": "ggg",
+    "link": "",
+    "order": 1,
+    "is_active": true
+  }
+}
+]
